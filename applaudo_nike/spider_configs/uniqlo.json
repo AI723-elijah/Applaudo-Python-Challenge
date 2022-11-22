@@ -1,0 +1,34 @@
+{
+    "item_class": "ProductItem",
+    "loader_class": "UniqloLoader",
+    "load_rules": {
+      "brand": {
+        "method": "value",
+        "args": ["Uniqlo"]
+      },
+      "title": {
+        "method": "xpath",
+        "args": ["//h1[@class=\"fr-ec-display\"]/text()"]
+      },
+      "art_no": {
+        "method": "xpath",
+        "args": ["//p[@class=\"fr-ec-body--small\"]/text()"]
+      },
+      "rating": {
+        "method": "xpath",
+        "args": ["//div[@class=\"fr-ec-rating-average\"]/text()"]
+      },
+      "item_url": {
+        "method": "eval",
+        "args": ["response.url"]
+      },
+      "color": {
+        "method": "xpath",
+        "args": ["//[@id=\"product-color-picker\"]/text()"]
+      },
+      "size": {
+        "method": "xpath",
+        "args": ["//[@id=\"product-size-picker\"]/text()"]
+      }
+    }
+  }
